@@ -9,6 +9,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.resolve = config.resolve || {}
+      config.resolve.alias = config.resolve.alias || {}
+      config.resolve.alias["osx-temperature-sensor"] = false
+    }
+    return config
+  },
 }
 
 export default nextConfig

@@ -1,0 +1,18 @@
+node_modules
+.next
+out
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+pnpm-debug.log*
+yarn-error.log*
+package-lock.json
+data/shortcuts.json
+
+# macOS
+.DS_Store
+
+# Logs
+npm-debug.log*

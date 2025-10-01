@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false)
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   // Initialize from localStorage or system preference
   useEffect(() => {
@@ -14,7 +14,7 @@ export function ThemeToggle() {
     const prefersDark =
       typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
 
-    const nextDark = stored ? stored === "dark" : prefersDark
+    const nextDark = stored ? stored === "dark" : prefersDark || true
     setIsDark(nextDark)
     if (typeof document !== "undefined") {
       document.documentElement.classList.toggle("dark", nextDark)

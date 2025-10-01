@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${Doto.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="en" className={`${Doto.variable} ${GeistMono.variable} antialiased dark`}>
       <body className="font-sans">{children}</body>
     </html>
   )
